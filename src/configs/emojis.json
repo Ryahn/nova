@@ -1,0 +1,42 @@
+{
+	"normal": {
+		"error": "❌",
+		"success": "✅",
+		"warning": "⚠️",
+		"pending": "⏳",
+		"check": "✔️",
+		"heart": "❤️",
+		"pong": "🏓",
+		"birthday": "🎂",
+		"clock": "⏰",
+		"party": "🎉",
+		"info": "ℹ️",
+		"arrowDown": "⬇️",
+		"arrowUp": "⬆️"
+	},
+
+	"Bot": {
+		"add": "📥",
+		"info": "ℹ️",
+		"min": "🔻"
+	},
+
+	"badges": {
+		"bot": "🤖",
+		"management": "👑",
+		"bug": "🐛",
+		"developer": "👨‍💻",
+		"supporter": "👨‍🔧",
+		"team": "👨‍👩‍👧‍👦",
+		"booster": "🚀",
+		"partner": "🤝",
+		"voter": "🗳️",
+		"support": "🔧",
+		"moderator": "👮",
+		"designer": "🎨",
+		"active": "🔥",
+		"event": "🎉",
+		"vip": "👑",
+		"marketing": "📈"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "Source",
+			"path": "./src"
+		},
+		{
+			"name": "Schema",
+			"path": "./prisma"
+		}
+		{
+			"name": "Root",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
