@@ -36,3 +36,4 @@ if (debugModeEnabled) {
         logger.log("ERROR", "Client encountered a rate limit", data);
     });
 }
+require('./handlers')(client);

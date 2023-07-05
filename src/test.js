@@ -1,2 +1,2 @@
 const logger = require('./utils/logger')
-logger.warn('test')
+logger.info('test')

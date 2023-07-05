@@ -20,5 +20,10 @@ module.exports = {
         footer: `© Nova 1899 - ${new Date().getFullYear()}`, 
         botInvite: `https://discord.com/oauth2/authorize?&client_id=${clientId}&scope=applications.commands+bot&permissions=8`,
         serverInvite: "",
+        app_id: process.env.DISCORD_APP_ID
     },
+
+    app: {
+        global_commands: true,
+    }
 };

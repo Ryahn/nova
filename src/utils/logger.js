@@ -1,7 +1,7 @@
 const { createLogger, format, transports } = require('winston');
 const chalk = require('chalk');
 const { combine, timestamp, label, printf, simple, splat } = format;
-const consoleFormat = printf(({ level, message, label, timestamp }) => {
+const consoleFormat = printf(({ level, message, type, label, timestamp }) => {
     var levelUpper = level.toUpperCase();
     switch (levelUpper) {
         case "INFO":
@@ -22,10 +22,11 @@ const consoleFormat = printf(({ level, message, label, timestamp }) => {
         default:
             break;
     }
-    return `[${chalk.blueBright.bgBlack.bold(label)}] [${chalk.whiteBright.bgBlack(timestamp)}] [${level}]: ${message}`;
+    return `[${chalk.blueBright.bgBlack.bold(label)}] [${chalk.whiteBright.bgBlack(timestamp)}] [${level}] ${message}`;
+
 });
 const fileFormat = printf(({ level, message, label, timestamp }) => {
-    return `[${label}] [${timestamp}] [${level}]: ${message}`;
+    return `[${label}] [${timestamp}] [${level}] ${message}`;
 });
 const logger = createLogger({
     level: 'info',
@@ -33,8 +34,7 @@ const logger = createLogger({
         label({ label: 'NOVA' }),
         timestamp(),
         format.splat(),
-        consoleFormat
-
+        consoleFormat,
     ),
     transports: [
         new transports.Console(),

@@ -1,4 +1,5 @@
 const { ClusterManager, HeartbeatManager } = require('discord-hybrid-sharding');
+const { GatewayIntentBits, Partials, Client, REST, Routes } = require('discord.js');
 const config = require('./configs/bot');
 const logger = require('./utils/logger');
 const path = require('path');
@@ -27,3 +28,13 @@ manager.extend(
         maxMissedHeartbeats: 5,
     })
 );
+
+
+const client = new Client({
+    intents: [GatewayIntentBits.Guilds],
+    partials: [Partials.Message, Partials.Reaction, Partials.Channel],
+});
+client.login(config.discord.token);
+const rest = new REST({ version: '10' }).setToken(config.discord.token);
+//Slash commands (Register)
+// require('./refreshSlash')(client, rest, Routes);
